@@ -11,38 +11,41 @@ import Product from "./components/products/Product";
 import Contacts from "./components/contacts/Contacts";
 import Favori from "./components/favori/Favori";
 import Sepet from "./components/sepet/Sepet";
+import ProductDetails from "./components/productDetails/ProductDetails";
 
 
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Router>
         <div>
           <nav>
-            <ul>
-              <li>
-                <Link to="/">Products</Link>
-              </li>
-              <li>
-                <Link to="/contacts">iletişim</Link>
-              </li>
-              <li>
-                <Link to="/favori">Favorilerim</Link>
-              </li>
-              <li>
-                <Link to="/sepet">Sepetim</Link>
-              </li>
+            <ul className="navbarContainer">
+              <div className="navbarLeft">
+                <li>
+                  <Link className="navbar" to="/">Ürünler</Link>
+                </li>
+                <li  >
+                  <Link className="navbar" to="/contacts">iletişim</Link>
+                </li>
+              </div>
+              <div className="navbarRight">
+                <li >
+                  <Link className="navbar" to="/favori">Favorilerim</Link>
+                </li>
+                <li >
+                  <Link className="navbar" to="/sepet">Sepetim</Link>
+                </li>
+              </div>
             </ul>
           </nav>
-
-          {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
           <Switch>
             <Route path="/" exact component={Product} />
             <Route path="/contacts" component={Contacts} />
             <Route path="/favori" component={Favori} />
             <Route path="/sepet" component={Sepet} />
+            <Route path="/product/:id" component={ProductDetails} />
 
 
           </Switch>

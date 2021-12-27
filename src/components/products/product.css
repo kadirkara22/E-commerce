@@ -1,0 +1,84 @@
+.productContainer {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.productCard {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  text-decoration: none;
+}
+.productImage {
+  width: 500px;
+  height: 700px;
+  border-bottom: 1px solid royalblue;
+}
+.cardForm {
+  width: 500px;
+  height: 1000px;
+  border: 1px solid royalblue;
+  margin: 0 0 40px 35px;
+}
+.productInfo {
+  width: 500px;
+}
+.productName {
+  width: 500px;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  margin: 40px 10px;
+}
+.productPrice {
+  font-size: 30px;
+  opacity: 0.6;
+  text-decoration: line-through;
+  color: black;
+  margin: 20px 10px;
+}
+.productIndirim {
+  font-size: 40px;
+  font-weight: bold;
+  color: red;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.banaOzel {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  height: 90px;
+  border-top: 1px solid rgb(181, 22, 34);
+}
+
+.favori {
+  display: flex;
+  flex: 1;
+  font-size: 40px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: black;
+}
+.favori:hover {
+  background-color: rgba(230, 215, 215, 0.486);
+  color: black;
+}
+.far {
+  cursor: pointer;
+}
+.far:hover {
+  color: rgb(181, 22, 34);
+}
+.fas {
+  color: rgb(181, 22, 34);
+}
