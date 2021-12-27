@@ -12,7 +12,7 @@ const Product = () => {
         axios("https://61c9d67920ac1c0017ed8ec2.mockapi.io/products").then((res) => setProduct(res.data))
 
     }, [])
-    console.log(product)
+
     return (
         <div className="productContainer">
 
@@ -34,7 +34,7 @@ const Product = () => {
                         </Link>
                         <div className="banaOzel">
                             <div className="favori"><i className="far fa-heart"></i></div>
-                            <div className="favori"><i class="fas fa-heart"></i></div>
+                            <div className="favori"><i className="fas fa-heart"></i></div>
                         </div>
                     </div>
                 ))

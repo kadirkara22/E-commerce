@@ -20,7 +20,7 @@ function App() {
     <div className="app">
       <Router>
         <div>
-          <nav>
+          <nav className="nav">
             <ul className="navbarContainer">
               <div className="navbarLeft">
                 <li>

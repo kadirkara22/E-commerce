@@ -1,0 +1,10 @@
+.detail {
+  width: 80%;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.productInfo {
+  height: 200px;
+}
