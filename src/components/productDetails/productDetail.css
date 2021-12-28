@@ -6,5 +6,41 @@
   flex-direction: row;
 }
 .productInfo {
-  height: 200px;
+  height: 480px;
+  width: 800px;
+}
+.loading {
+  font-size: 50px;
+}
+.productName {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.productDescription {
+  font-size: 23px;
+  margin-left: 50px;
+  background-color: rgba(223, 210, 210, 0.26);
+  padding: 20px;
+}
+.detailSepet {
+  display: flex;
+  flex: 1;
+  height: 100px;
+  align-items: center;
+  flex-direction: row;
+}
+.sepet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 3;
+  height: 80px;
+  font-size: 40px;
+  margin-left: 50px;
+  background-color: rgb(181, 22, 34);
+  color: white;
+}
+.detailFavori {
+  margin-left: 30px;
 }

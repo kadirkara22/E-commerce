@@ -4,20 +4,36 @@ import "./product.css";
 import {
     Link
 } from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux';
+import { selectFavori, showProduct } from '../../redux/eCommerceSlice';
 const Product = () => {
-    const [product, setProduct] = useState([])
 
+    const [loading, setLoading] = useState(true)
+
+    const favori = useSelector(state => state.ecommerce.favoriCart)
+    const items = useSelector(state => state.ecommerce.items)
+    const dispatch = useDispatch()
 
     useEffect(() => {
-        axios("https://61c9d67920ac1c0017ed8ec2.mockapi.io/products").then((res) => setProduct(res.data))
+        axios("https://61c9d67920ac1c0017ed8ec2.mockapi.io/products")
+            .then((res) => dispatch(showProduct(res.data)))
+            .finally(() => setLoading(false))
+    }, [dispatch])
 
-    }, [])
+    const handleClick = (product) => {
+        dispatch(selectFavori(product))
+    }
 
+    console.log(favori)
+    console.log(items)
     return (
         <div className="productContainer">
 
             {
-                product.map(item => (
+                loading && <div className="loading">Loading...</div>
+            }
+            {
+                items.map(item => (
                     <div className="cardForm">
                         <Link key={item.id} to={`/product/${item.id}`} className="productCard">
                             <div >
@@ -31,10 +47,16 @@ const Product = () => {
                                 </div>
 
                             </div>
+
                         </Link>
-                        <div className="banaOzel">
-                            <div className="favori"><i className="far fa-heart"></i></div>
-                            <div className="favori"><i className="fas fa-heart"></i></div>
+
+                        <div className="banaOzel" onClick={() => handleClick(item)}>
+                            {
+                                item.favori !== true ? <i className="far fa-heart"></i>
+                                    :
+                                    <i className="fas fa-heart"></i>
+                            }
+
                         </div>
                     </div>
                 ))

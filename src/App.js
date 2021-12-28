@@ -26,7 +26,7 @@ function App() {
                 <li>
                   <Link className="navbar" to="/">Ürünler</Link>
                 </li>
-                <li  >
+                <li>
                   <Link className="navbar" to="/contacts">iletişim</Link>
                 </li>
               </div>
