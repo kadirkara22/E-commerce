@@ -1,0 +1,7 @@
+.banafavori {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  height: 90px;
+}

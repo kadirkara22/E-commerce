@@ -18,14 +18,14 @@ const Product = () => {
         axios("https://61c9d67920ac1c0017ed8ec2.mockapi.io/products")
             .then((res) => dispatch(showProduct(res.data)))
             .finally(() => setLoading(false))
+
     }, [dispatch])
 
     const handleClick = (product) => {
         dispatch(selectFavori(product))
     }
 
-    console.log(favori)
-    console.log(items)
+
     return (
         <div className="productContainer">
 
